@@ -1,69 +1,83 @@
 body {
     padding: 10px;
-    justify-content: space-between;
-}
 
+}
+/* Container do body, posiciona tudo no centro da flex */
 .users-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/* Cuida da barra de busca e do botao buscar, posicionando-os */
 .busca {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 
     margin-top: 50px;
     margin-bottom: 100px;
 }
+/* Cuida das propriedades da barra como cor e margem */
+#barraBuscar {
+    font-size: large;
+    width: 300px;
+    border-color: aqua;
+    margin-right: 20px;
+}
 
+
+/* Container dos resultados que faz as duas tabelas 
+ficarem posicionadas ao lado uma da outra */
 .resultados {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
 }
-
-#barraBuscar {
-    font-size: large;
-    width: 300px;
-    border-color: aqua;
-    margin-right:20px ;
-}
-
+/* Adiciona borda e padding aos dois displays*/
 #usersToFilter,
 #usersFiltered {
     padding: 20px;
     border: 1px solid grey;
     border-radius: 10px;
-    align-content: center;
 }
-
+/* Delimita o tamanho maximo do de usuarios filtrados */
 #usersToFilter {
-    margin-right: 30px;
+    margin-right: 80px;
     width: 400px;
 }
-
-.thumbs{
-    border-radius: 30px;
-    border: 2px solid black;
-    margin: 5px;
-}
-.users-text{
-    font-size: 20px;
-    padding-left: 5px;
-}
-.NotFiltered{
+/* Transforma o display de usuários filtrados em flex */
+.filteredUsers {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
+/* Adiciona as thumbs do user à div */
+.thumbs {
+    border-radius: 30px;
+    border: 2px solid black;
+    margin: 5px;
+}
+/* Adiciona o nome e idade do user à div */
+.users-text {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+
+/* Texto de titulo dos displays*/
+#foundText {
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+
+
+/* Estilo para a tabela de Estatisticas */
 .statsTable {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.alignResults{
-    align-items: flex-end;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 250px;
 }

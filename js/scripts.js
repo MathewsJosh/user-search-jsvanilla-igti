@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
   botaoBuscar = document.querySelector("#botaoBuscar");
   usersToFilter = document.querySelector("#usersToFilter");
   usersFiltered = document.querySelector("#usersFiltered");
+  barraBuscar.focus();
 
   fetchUsers();
 });
@@ -53,8 +54,10 @@ function render() {
 
 function handleEnterClick() {
   if (barraBuscar.value === "") {
-    botaoBuscar.disabled = true;
+	botaoBuscar.disabled = true;
+	barraBuscar.focus();
   } else {
+	barraBuscar.focus();
     botaoBuscar.disabled = false;
     document.body.addEventListener("keyup", function (e) {
       if (e.keyCode == 13) renderSearch();
@@ -63,6 +66,7 @@ function handleEnterClick() {
       renderSearch();
     });
   }
+  barraBuscar.focus();
 }
 
 function renderSearch() {
@@ -76,17 +80,17 @@ function renderSearch() {
   if (filteredUsers == 0) {
     // Se nenhum usuário for encontrado, avisa
     let usersNotFilteredHTML = `
-	<div>${filteredUsers.length} user(s) found!
+	<div id="foundText">${filteredUsers.length} user(s) found!
 	<br><br><br><br> Please Try Again!</$>
 	</div>`;
     usersToFilter.innerHTML = usersNotFilteredHTML;
   } else {
     //Se encontrar usuários, Mostra e chama Stats
-    let usersNotFilteredHTML = `<div><h5>${filteredUsers.length} user(s) found:</h5>`;
+    let usersNotFilteredHTML = `<div class="foundResults"><h4 id="foundText">${filteredUsers.length} user(s) found:</h4>`;
     filteredUsers.forEach((user) => {
       const { name, gender, picture, age } = user;
       const usersAuxHTML = `
-			<div class="NotFiltered">
+			<div class="filteredUsers">
 				<div>
 					<img class="thumbs" src="${picture}" alt="${name}">
 				</div>
@@ -109,27 +113,36 @@ function renderStats() {
 
   let usersFilteredHTML = "<div>";
   const usersAuxHTML = `
-		<div class="statsTable">
+		<div>
+		<h4 id="foundText">Stats</h4>
 			<div class="statsTable">
-			  Total Male: 
+				<div>
+				Total Male:
+				</div>
 				<div class="alignResults">
 				${totalMale}
 				</div>
 		  	</div>
 			<div class="statsTable">
-			  Total Female: 
+				<div>
+				Total Female: 
+				</div>
 				<div class="alignResults">
 				${totalFemale}
 				</div>
 			</div>
 			<div class="statsTable">
-			  Total Sum of Ages: 
+				<div>
+				Total Sum of Ages: 
+				</div>
 				<div class="alignResults">
 				${totalAges}
 				</div>
 			</div>
 			<div class="statsTable">
-			  Average Ages: 
+				<div>
+				Average Ages: 
+				</div>
 				<div class="alignResults">
 				${averageAges.toFixed(2)}
 				</div>

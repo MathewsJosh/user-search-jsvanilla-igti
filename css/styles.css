@@ -1,13 +1,14 @@
 body {
     padding: 10px;
-
 }
+
 /* Container do body, posiciona tudo no centro da flex */
 .users-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /* Cuida da barra de busca e do botao buscar, posicionando-os */
 .busca {
     display: flex;
@@ -17,6 +18,7 @@ body {
     margin-top: 50px;
     margin-bottom: 100px;
 }
+
 /* Cuida das propriedades da barra como cor e margem */
 #barraBuscar {
     font-size: large;
@@ -33,6 +35,7 @@ ficarem posicionadas ao lado uma da outra */
     flex-direction: row;
     align-items: flex-start;
 }
+
 /* Adiciona borda e padding aos dois displays*/
 #usersToFilter,
 #usersFiltered {
@@ -40,16 +43,23 @@ ficarem posicionadas ao lado uma da outra */
     border: 1px solid grey;
     border-radius: 10px;
 }
+
 /* Delimita o tamanho maximo do de usuarios filtrados */
 #usersToFilter {
-    margin-right: 80px;
-    width: 400px;
+
+    width: fit-content;
 }
+
+.separador{
+    width: 10vh;
+}
+
 /* Transforma o display de usuários filtrados em flex */
 .filteredUsers {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: fit-content;
 }
 
 /* Adiciona as thumbs do user à div */
@@ -58,26 +68,51 @@ ficarem posicionadas ao lado uma da outra */
     border: 2px solid black;
     margin: 5px;
 }
+
 /* Adiciona o nome e idade do user à div */
 .users-text {
     font-size: 20px;
     padding-left: 5px;
 }
 
+.foundResults{
+    width: fit-content;
+}
+
 
 /* Texto de titulo dos displays*/
 #foundText {
-    align-self: center;
-    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1em;
+    align-self: flex-start;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
 
 
 
+.renderStatsTable{
+    width: 35vh;
+}
 /* Estilo para a tabela de Estatisticas */
 .statsTable {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
     justify-content: space-between;
-    width: 250px;
+    width: auto;
+}
+
+
+
+footer {
+    font-size: 0.3em;
+    color: #9999ff;
+    margin-top: 15vh;
+    margin-bottom: 8vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: #9999ff;
 }

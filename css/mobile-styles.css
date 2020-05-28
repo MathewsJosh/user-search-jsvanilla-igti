@@ -1,0 +1,92 @@
+@media (max-width: 1200px) {
+    body {
+        padding: 5px;
+        width: fit-content;
+        display: contents;
+        align-self: center;
+        zoom: 100%; 
+    }
+
+    .users-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .busca {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 1vh;
+        margin-bottom: 5vh;
+        width: fit-content;
+    }
+
+    #barraBuscar::-webkit-input-placeholder {
+        color:#9999ff;
+     }
+
+    #barraBuscar {
+        font-size: 0.7em;
+        width: auto;
+    }
+
+    .resultados {
+        text-align: center;
+    }
+
+    #usersToFilter,
+    #usersFiltered {
+        padding: 5px;
+        width: fit-content;
+    }
+    .renderStatsTable{
+        width: fit-content;
+    }
+    .separador{
+        width: 10px;
+    }
+    .foundResults{
+        width: fit-content;
+    }
+
+    .users-text {
+        font-weight: 500;
+        font-size: 0.7em;
+    }
+
+    .thumbs {
+        border-radius: 30px;
+        border: 1px solid black;
+        margin: 5px;
+        width: auto;
+    }
+
+    #foundText {
+        font-weight: bold;
+        font-size: 1em;
+        align-self: flex-start;
+        margin-bottom: 0.5vh;
+        margin-top: 0.5vh;
+    }
+
+    .statsTable {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-start;
+        justify-content: space-between;
+        font-size: 0.7em;
+        width: auto;
+    }
+    footer {
+        color: #9999ff;
+        margin-top: 5vh;
+        margin-bottom: 8vh;
+    }
+    
+    footer p {
+        font-size: 2em;
+        text-decoration: none;
+        color: #9999ff;
+    }
+}
